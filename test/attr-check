@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+import attr_check
+
+import example_imports
+
+modules = (example_imports, )
+for exception in attr_check.yield_exceptions(*modules):
+    print exception
