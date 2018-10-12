@@ -2,7 +2,7 @@ dumb dumb import-time attribute access checking for python.
 
 Given `./test/example_imports.py`:
 
-```
+```python
 from attr import attrs, attrib
 from attr_check import attr_checker, kwarg_checker
 
@@ -31,7 +31,7 @@ def dot_access():
 On running `./test/attr-check`, the following warnings will be printed to STDERR:
 
 
-```
+```python
 Import Warning: function 'attr_check.test.example_imports.dot_access' (line 23) will access non-existent attr 'not_gonna_happen' of <class 'example_imports.Coordinates'>
 Import Warning: function 'attr_check.test.example_imports.dot_access' (line 22) will access non-existent attr 'no_way_jose' of <class 'example_imports.Coordinates'>
 Import Warning: function 'attr_check.test.example_imports.dot_access' (line 17) will access non-existent attr 'nope' of <class 'example_imports.Coordinates'>
